@@ -4,8 +4,8 @@ import 'package:credit_card_type_detector/credit_card_type_detector.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class CardDetectProvider extends ChangeNotifier {
-  static CardDetectProvider of(BuildContext context, {bool listen = false}) => Provider.of<CardDetectProvider>(context, listen: listen);
+class KeicyCardDetectProvider extends ChangeNotifier {
+  static KeicyCardDetectProvider of(BuildContext context, {bool listen = false}) => Provider.of<KeicyCardDetectProvider>(context, listen: listen);
 
   String _typeString = "unknown";
   String get typeString => _typeString;
