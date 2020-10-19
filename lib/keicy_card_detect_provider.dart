@@ -13,9 +13,12 @@ class KeicyCardDetectProvider extends ChangeNotifier {
   CreditCardType _cardType;
   CreditCardType get cardType => _cardType;
 
+  String _number = "";
+  String get number => number;
+
   void detectCardType(String number) {
-    number = number.replaceAll(" ", "");
-    CreditCardType cardType = detectCCType(number);
+    _number = number.replaceAll(" ", "");
+    CreditCardType cardType = detectCCType(_number);
     if (_cardType != cardType) {
       _cardType = cardType;
       _typeString = cardType.toString().split('.')[1];
