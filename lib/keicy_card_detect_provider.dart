@@ -14,7 +14,7 @@ class KeicyCardDetectProvider extends ChangeNotifier {
   CreditCardType get cardType => _cardType;
 
   String _number = "";
-  String get number => number;
+  String get number => _number;
 
   void detectCardType(String number) {
     _number = number.replaceAll(" ", "");
